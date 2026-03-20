@@ -114,6 +114,10 @@
   <script src="assets/js/search.js"></script>
   <script src="assets/js/location.js"></script>
   <script src="assets/js/ui.js"></script>
-
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
 </body>
   </html>
