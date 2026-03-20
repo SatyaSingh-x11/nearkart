@@ -1,0 +1,18 @@
+/* FLEX */
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* SPACING */
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+
+/* TEXT */
+.text-muted {
+  color: #94a3b8;
+}
