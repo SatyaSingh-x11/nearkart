@@ -1,298 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NearKart</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>NearKart</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,sans-serif}body{background:linear-gradient(120deg,#fff,#f5f3ff);color:#1e1b4b;overflow-x:hidden}
+header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);z-index:10}
+.logo{font-weight:800;color:#7c3aed;animation:blink 10s infinite}@keyframes blink{0%,95%,100%{opacity:1}97%{opacity:0}}
+nav a{margin:0 8px;text-decoration:none;color:#444;font-size:14px}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
+.bg{position:absolute;width:200%;height:200%;background:linear-gradient(120deg,#7c3aed,#a78bfa,#c4b5fd);animation:move 12s infinite alternate;filter:blur(90px);z-index:-1}@keyframes move{0%{transform:translate(-10%,-10%)}100%{transform:translate(10%,10%)}}
+h1{font-size:34px}#changing{color:#7c3aed;transition:.3s}.cta{margin-top:16px;padding:12px 20px;border:none;border-radius:14px;background:#7c3aed;color:#fff}
+.section{padding:60px 20px;max-width:900px;margin:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.card{background:#fff;padding:16px;border-radius:16px;box-shadow:0 10px 25px rgba(124,58,237,.2)}
+.stats{display:flex;justify-content:space-around;margin-top:20px}.count{color:#7c3aed;font-size:26px}
+.test{display:flex;gap:10px;overflow:hidden}.chip{display:inline-block;padding:6px 10px;border-radius:20px;background:#ede9fe;margin:4px;font-size:12px}
+.marquee{white-space:nowrap;overflow:hidden}.marquee span{display:inline-block;animation:scroll 10s linear infinite}@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.read{max-height:110px;overflow:hidden;position:relative;transition:.5s}.fade{position:absolute;bottom:0;width:100%;height:50px;background:linear-gradient(to bottom,transparent,#fff)}
+.read.exp{max-height:1000px}.btn{margin-top:10px;background:#7c3aed;color:#fff;border:none;padding:8px 14px;border-radius:20px;animation:float 2s infinite}@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.hidden{opacity:0;transform:translateY(20px);transition:.6s}.show{opacity:1;transform:translateY(0)}
+footer{padding:30px;text-align:center;color:#666}
+</style></head><body>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+<header><div class="logo">NearKart</div><nav><a href="#">Home</a><a href="#">Features</a><a href="#">About</a></nav></header>
 
-<body>
+<section class="hero"><div class="bg"></div><h1>Find <span id="changing">Anything</span> Nearby ⚡</h1><p>No more shop hunting.</p><button class="cta">Get Started</button></section>
 
-<!-- GLOBAL HEADER -->
-<header id="header"></header>
+<section class="section"><h2>Explore Categories</h2><div><span class="chip">Grocery</span><span class="chip">Medicine</span><span class="chip">Electronics</span><span class="chip">Snacks</span></div></section>
 
-<main>
+<section class="section"><h2>Live Demo</h2><input id="search" placeholder="Search milk..." style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd"><div id="res"></div></section>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>
-    Find <span id="changing-text">Anything</span> Nearby ⚡
-  </h1>
-  <p>
-    Stop wasting time going shop to shop.  
-    Discover real-time product availability near you.
-  </p>
-  <button class="cta">Get Started</button>
-</section>
+<section class="section"><h2>Features</h2><div class="grid"><div class="card">⚡ Real-time</div><div class="card">📍 Nearby</div><div class="card">💰 Compare</div><div class="card">⭐ Trusted</div></div></section>
 
-<!-- PROBLEM -->
-<section class="section">
-  <h2>The Problem</h2>
-  <p>
-    Every day, people waste hours searching for simple products.  
-    You walk from shop to shop asking:
-  </p>
-  <ul>
-    <li>“Milk available?”</li>
-    <li>“Do you have charger?”</li>
-    <li>“Is this in stock?”</li>
-  </ul>
-  <p>
-    This is inefficient, frustrating, and outdated.
-  </p>
-</section>
+<section class="section"><h2>Growing Fast</h2><div class="stats"><div><div class="count" data="10000">0</div>Users</div><div><div class="count" data="500">0</div>Shops</div><div><div class="count" data="50">0</div>Cities</div></div></section>
 
-<!-- SOLUTION -->
-<section class="section">
-  <h2>The Solution</h2>
-  <p>
-    NearKart connects you to nearby shops instantly.  
-    Just search once and see:
-  </p>
-  <ul>
-    <li>Available products</li>
-    <li>Prices</li>
-    <li>Distance</li>
-    <li>Shop ratings</li>
-  </ul>
-</section>
+<section class="section"><h2>Trusted By</h2><div class="marquee"><span> Local Shops • Students • Families • Businesses • Users • Local Shops • </span></div></section>
 
-<!-- LIVE DEMO -->
-<section class="section">
-  <h2>Live Experience</h2>
-  <div class="demo">
-    <input placeholder="Search for milk..." id="fake-search">
-    <div id="demo-results"></div>
-  </div>
-</section>
+<section class="section"><h2>Testimonials</h2><div class="test" id="test"><div class="card">Saved hours!</div><div class="card">So fast!</div><div class="card">Amazing!</div></div></section>
 
-<!-- FEATURES -->
-<section class="section">
-  <h2>Powerful Features</h2>
+<section class="section"><h2>Deep Dive</h2><div class="read" id="read">NearKart solves local discovery inefficiency. It removes uncertainty and saves time. Users explore digitally before stepping out. This improves decisions and reduces effort. Future includes AI and predictive systems. This will redefine local commerce and everyday convenience.</div><div class="fade"></div><button id="btn" class="btn">Read More</button></section>
 
-  <div class="grid">
-    <div class="card">
-      <h3>⚡ Real-Time Search</h3>
-      <p>Get instant results from nearby shops.</p>
-    </div>
+<footer>© NearKart • Built by Satya 🚀</footer>
 
-    <div class="card">
-      <h3>📍 Location Based</h3>
-      <p>See results based on your exact area.</p>
-    </div>
+<script>
+const w=["Milk","Snacks","Medicines","Chargers"];let i=0;setInterval(()=>{let e=document.getElementById("changing");e.style.opacity=0;setTimeout(()=>{i=(i+1)%w.length;e.innerText=w[i];e.style.opacity=1},300)},2000);
+document.getElementById("btn").onclick=()=>{let r=document.getElementById("read");r.classList.toggle("exp");btn.innerText=r.classList.contains("exp")?"Show Less":"Read More"};
+setTimeout(()=>{search.value="Milk";setTimeout(()=>{res.innerHTML="<div class='card'>Milk ₹28</div><div class='card'>Milk ₹30</div>"},800)},1200);
+document.querySelectorAll(".count").forEach(e=>{let t=+e.getAttribute("data"),c=0;let i=setInterval(()=>{c+=t/50;if(c>=t){e.innerText=t;clearInterval(i)}else e.innerText=Math.floor(c)},40)});
+setInterval(()=>{test.scrollLeft+=200;if(test.scrollLeft>=test.scrollWidth-test.clientWidth)test.scrollLeft=0},2000);
+const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")}));
+document.querySelectorAll(".section,.card").forEach(el=>{el.classList.add("hidden");ob.observe(el)});
+</script>
 
-    <div class="card">
-      <h3>💰 Price Comparison</h3>
-      <p>Find the best deals instantly.</p>
-    </div>
-
-    <div class="card">
-      <h3>⭐ Verified Shops</h3>
-      <p>Trustworthy and rated vendors.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="section">
-  <h2>Trusted Platform</h2>
-  <div class="stats">
-    <div>
-      <h3 class="count" data-target="10000">0</h3>
-      <p>Users</p>
-    </div>
-    <div>
-      <h3 class="count" data-target="500">0</h3>
-      <p>Shops</p>
-    </div>
-    <div>
-      <h3 class="count" data-target="50">0</h3>
-      <p>Cities</p>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section">
-  <h2>What People Say</h2>
-
-  <div class="testimonials">
-
-    <div class="card">
-      <p>"NearKart saved me 2 hours daily!"</p>
-      <h4>- Rahul</h4>
-    </div>
-
-    <div class="card">
-      <p>"Super fast and easy to use."</p>
-      <h4>- Priya</h4>
-    </div>
-
-    <div class="card">
-      <p>"I found everything nearby instantly."</p>
-      <h4>- Arjun</h4>
-    </div>
-
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section">
-  <h2>How It Works</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>1. Search</h3>
-      <p>Type the product you need.</p>
-    </div>
-
-    <div class="card">
-      <h3>2. Compare</h3>
-      <p>See nearby shops and prices.</p>
-    </div>
-
-    <div class="card">
-      <h3>3. Buy</h3>
-      <p>Choose best option and go.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- USE CASES -->
-<section class="section">
-  <h2>Use Cases</h2>
-
-  <p>
-    NearKart is useful for:
-  </p>
-
-  <ul>
-    <li>Students searching essentials</li>
-    <li>Emergency medicine needs</li>
-    <li>Quick grocery shopping</li>
-    <li>Electronics & accessories</li>
-  </ul>
-</section>
-
-<!-- FOUNDER -->
-<section class="section">
-  <h2>Founder</h2>
-  <p>
-    Built by Satya 🚀  
-    A student with a vision to simplify local shopping.
-  </p>
-</section>
-
-<!-- ROADMAP -->
-<section class="section">
-  <h2>Future Vision</h2>
-  <ul>
-    <li>Delivery integration</li>
-    <li>AI recommendations</li>
-    <li>Shop dashboards</li>
-    <li>Real-time inventory sync</li>
-  </ul>
-</section>
-
-<!-- FAQ -->
-<section class="section">
-  <h2>FAQs</h2>
-
-  <div class="card">
-    <h4>Is NearKart free?</h4>
-    <p>Yes, completely free for users.</p>
-  </div>
-
-  <div class="card">
-    <h4>How accurate is data?</h4>
-    <p>Based on real-time updates from shops.</p>
-  </div>
-
-</section>
-
-<!-- FINAL CTA -->
-<section class="section final">
-  <h2>Start Using NearKart Today</h2>
-  <button class="cta">Explore Now</button>
-</section>
-<section class="section big-idea">
-
-  <h2>The Future of Local Shopping</h2>
-
-  <p class="big-text">
-    NearKart is not just a tool — it is a shift in how people interact with their surroundings. 
-    For decades, local shopping has remained offline, fragmented, and inefficient. People rely 
-    on memory, guesswork, and physical effort to find even the simplest products.
-  </p>
-
-  <p class="big-text">
-    We believe discovery should be instant. Just like you search anything online, you should 
-    be able to search your real-world surroundings with the same speed. NearKart transforms 
-    your nearby area into a live, searchable system.
-  </p>
-
-</section>
-
-<section class="section">
-
-  <h2>Deep Dive into NearKart</h2>
-
-  <div class="read-wrapper">
-
-    <div class="read-box" id="read-box">
-
-      <p>
-        NearKart is designed to solve one of the most overlooked problems in everyday life — 
-        the inefficiency of local discovery. Every individual has experienced the frustration 
-        of not finding a product in nearby stores despite it being available somewhere close.
-      </p>
-
-      <p>
-        This inefficiency is not just about inconvenience. It affects productivity, time management, 
-        and even decision-making. People either settle for suboptimal options or waste valuable time 
-        searching manually.
-      </p>
-
-      <p>
-        By introducing a hyperlocal search layer, NearKart allows users to interact with their 
-        surroundings in a completely new way. Instead of moving physically, users can explore 
-        digitally first, making smarter and faster decisions.
-      </p>
-
-      <p>
-        The long-term vision extends beyond simple discovery. NearKart aims to integrate logistics, 
-        predictive demand systems, and AI-driven recommendations that anticipate user needs before 
-        they even search.
-      </p>
-
-      <p>
-        Imagine a system where your daily essentials are suggested based on your habits, where nearby 
-        shops automatically update inventory, and where buying decisions become effortless. This is 
-        the future NearKart is building toward.
-      </p>
-
-    </div>
-
-    <!-- FADE EFFECT -->
-    <div class="fade-mask"></div>
-
-  </div>
-
-  <button id="read-more-btn" class="read-btn">
-    ↓ Read More ↓
-  </button>
-
-  </section>
-
-</main>
-<!-- GLOBAL FOOTER -->
-<footer id="footer"></footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+</body></html>
