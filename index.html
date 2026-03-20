@@ -1,51 +1,21 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>NearKart</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,sans-serif}body{background:linear-gradient(120deg,#fff,#f5f3ff);color:#1e1b4b;overflow-x:hidden}
-header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);z-index:10}
-.logo{font-weight:800;color:#7c3aed;animation:blink 10s infinite}@keyframes blink{0%,95%,100%{opacity:1}97%{opacity:0}}
-nav a{margin:0 8px;text-decoration:none;color:#444;font-size:14px}
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
-.bg{position:absolute;width:200%;height:200%;background:linear-gradient(120deg,#7c3aed,#a78bfa,#c4b5fd);animation:move 12s infinite alternate;filter:blur(90px);z-index:-1}@keyframes move{0%{transform:translate(-10%,-10%)}100%{transform:translate(10%,10%)}}
-h1{font-size:34px}#changing{color:#7c3aed;transition:.3s}.cta{margin-top:16px;padding:12px 20px;border:none;border-radius:14px;background:#7c3aed;color:#fff}
-.section{padding:60px 20px;max-width:900px;margin:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
-.card{background:#fff;padding:16px;border-radius:16px;box-shadow:0 10px 25px rgba(124,58,237,.2)}
-.stats{display:flex;justify-content:space-around;margin-top:20px}.count{color:#7c3aed;font-size:26px}
-.test{display:flex;gap:10px;overflow:hidden}.chip{display:inline-block;padding:6px 10px;border-radius:20px;background:#ede9fe;margin:4px;font-size:12px}
-.marquee{white-space:nowrap;overflow:hidden}.marquee span{display:inline-block;animation:scroll 10s linear infinite}@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.read{max-height:110px;overflow:hidden;position:relative;transition:.5s}.fade{position:absolute;bottom:0;width:100%;height:50px;background:linear-gradient(to bottom,transparent,#fff)}
-.read.exp{max-height:1000px}.btn{margin-top:10px;background:#7c3aed;color:#fff;border:none;padding:8px 14px;border-radius:20px;animation:float 2s infinite}@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
-.hidden{opacity:0;transform:translateY(20px);transition:.6s}.show{opacity:1;transform:translateY(0)}
-footer{padding:30px;text-align:center;color:#666}
-</style></head><body>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>NearKart</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,sans-serif}body{background:#fff;color:#1e1b4b;overflow-x:hidden}header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);z-index:10}.logo{font-weight:800;color:#7c3aed;animation:blink 10s infinite}@keyframes blink{0%,95%,100%{opacity:1}97%{opacity:0}}nav a{margin:0 8px;text-decoration:none;color:#444;font-size:14px}.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(120deg,#7c3aed,#a78bfa,#c4b5fd)}h1{font-size:34px;color:#fff}#changing{color:#fff}.hero p{color:#eee;margin-top:10px}.cta{margin-top:16px;padding:12px 20px;border:none;border-radius:14px;background:#fff;color:#7c3aed;font-weight:600}.section{padding:60px 20px;max-width:1000px;margin:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.card{background:#fff;padding:14px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.08);transition:.3s}.card img{width:100%;height:130px;object-fit:cover;border-radius:12px;margin-bottom:10px}.card:active{transform:scale(.96)}.section:nth-child(even){background:#faf5ff}.stats{display:flex;justify-content:space-around;margin-top:20px}.count{color:#7c3aed;font-size:26px}.test{display:flex;gap:10px;overflow-x:auto}.read{max-height:110px;overflow:hidden;position:relative;transition:.5s}.fade{position:absolute;bottom:0;width:100%;height:50px;background:linear-gradient(to bottom,transparent,#fff)}.read.exp{max-height:1000px}.btn{margin-top:10px;background:#7c3aed;color:#fff;border:none;padding:8px 14px;border-radius:20px;animation:float 2s infinite}@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}footer{padding:30px;text-align:center;color:#666}</style></head><body>
 
 <header><div class="logo">NearKart</div><nav><a href="#">Home</a><a href="#">Features</a><a href="#">About</a></nav></header>
 
-<section class="hero"><div class="bg"></div><h1>Find <span id="changing">Anything</span> Nearby ⚡</h1><p>No more shop hunting.</p><button class="cta">Get Started</button></section>
+<section class="hero"><h1>Find <span id="changing">Anything</span> Nearby ⚡</h1><p>No more shop hunting</p><button class="cta">Get Started</button></section>
 
-<section class="section"><h2>Explore Categories</h2><div><span class="chip">Grocery</span><span class="chip">Medicine</span><span class="chip">Electronics</span><span class="chip">Snacks</span></div></section>
+<section class="section"><h2>Live Nearby Results</h2><div class="grid"><div class="card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"><h3>Milk</h3><p>₹28 • 0.5km ⭐4.5</p></div><div class="card"><img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db"><h3>Rice</h3><p>₹60 • 1km ⭐4.2</p></div><div class="card"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505"><h3>Medicine</h3><p>₹20 • 0.3km ⭐4.8</p></div><div class="card"><img src="https://images.unsplash.com/photo-1510557880182-3c3c1c6b8f5d"><h3>Charger</h3><p>₹399 • 0.8km ⭐4.6</p></div></div></section>
 
-<section class="section"><h2>Live Demo</h2><input id="search" placeholder="Search milk..." style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd"><div id="res"></div></section>
-
-<section class="section"><h2>Features</h2><div class="grid"><div class="card">⚡ Real-time</div><div class="card">📍 Nearby</div><div class="card">💰 Compare</div><div class="card">⭐ Trusted</div></div></section>
+<section class="section"><h2>Features</h2><div class="grid"><div class="card">⚡ Real-time search</div><div class="card">📍 Nearby shops</div><div class="card">💰 Best price</div><div class="card">⭐ Trusted vendors</div></div></section>
 
 <section class="section"><h2>Growing Fast</h2><div class="stats"><div><div class="count" data="10000">0</div>Users</div><div><div class="count" data="500">0</div>Shops</div><div><div class="count" data="50">0</div>Cities</div></div></section>
 
-<section class="section"><h2>Trusted By</h2><div class="marquee"><span> Local Shops • Students • Families • Businesses • Users • Local Shops • </span></div></section>
+<section class="section"><h2>Testimonials</h2><div class="test" id="test"><div class="card">Saved hours! ⭐⭐⭐⭐⭐</div><div class="card">Super fast! ⚡</div><div class="card">Very useful 🔥</div></div></section>
 
-<section class="section"><h2>Testimonials</h2><div class="test" id="test"><div class="card">Saved hours!</div><div class="card">So fast!</div><div class="card">Amazing!</div></div></section>
-
-<section class="section"><h2>Deep Dive</h2><div class="read" id="read">NearKart solves local discovery inefficiency. It removes uncertainty and saves time. Users explore digitally before stepping out. This improves decisions and reduces effort. Future includes AI and predictive systems. This will redefine local commerce and everyday convenience.</div><div class="fade"></div><button id="btn" class="btn">Read More</button></section>
+<section class="section"><h2>Deep Dive</h2><div class="read" id="read">NearKart solves local discovery inefficiency. It removes uncertainty and saves time. Users explore digitally before stepping out. This improves decisions and reduces effort. Future includes AI and predictive systems. This will redefine local commerce.</div><div class="fade"></div><button id="btn" class="btn">Read More</button></section>
 
 <footer>© NearKart • Built by Satya 🚀</footer>
 
-<script>
-const w=["Milk","Snacks","Medicines","Chargers"];let i=0;setInterval(()=>{let e=document.getElementById("changing");e.style.opacity=0;setTimeout(()=>{i=(i+1)%w.length;e.innerText=w[i];e.style.opacity=1},300)},2000);
-document.getElementById("btn").onclick=()=>{let r=document.getElementById("read");r.classList.toggle("exp");btn.innerText=r.classList.contains("exp")?"Show Less":"Read More"};
-setTimeout(()=>{search.value="Milk";setTimeout(()=>{res.innerHTML="<div class='card'>Milk ₹28</div><div class='card'>Milk ₹30</div>"},800)},1200);
-document.querySelectorAll(".count").forEach(e=>{let t=+e.getAttribute("data"),c=0;let i=setInterval(()=>{c+=t/50;if(c>=t){e.innerText=t;clearInterval(i)}else e.innerText=Math.floor(c)},40)});
-setInterval(()=>{test.scrollLeft+=200;if(test.scrollLeft>=test.scrollWidth-test.clientWidth)test.scrollLeft=0},2000);
-const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")}));
-document.querySelectorAll(".section,.card").forEach(el=>{el.classList.add("hidden");ob.observe(el)});
-</script>
+<script>const w=["Milk","Snacks","Medicines","Chargers"];let i=0;setInterval(()=>{let e=document.getElementById("changing");e.style.opacity=0;setTimeout(()=>{i=(i+1)%w.length;e.innerText=w[i];e.style.opacity=1},300)},2000);document.getElementById("btn").onclick=()=>{let r=document.getElementById("read");r.classList.toggle("exp");btn.innerText=r.classList.contains("exp")?"Show Less":"Read More"};document.querySelectorAll(".count").forEach(e=>{let t=+e.getAttribute("data"),c=0;let i=setInterval(()=>{c+=t/50;if(c>=t){e.innerText=t;clearInterval(i)}else e.innerText=Math.floor(c)},40)});setInterval(()=>{test.scrollLeft+=200;if(test.scrollLeft>=test.scrollWidth-test.clientWidth)test.scrollLeft=0},2000);</script>
 
 </body></html>
