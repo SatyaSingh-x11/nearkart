@@ -1,21 +1,133 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>NearKart</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,sans-serif}body{background:#fff;color:#1e1b4b;overflow-x:hidden}header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);z-index:10}.logo{font-weight:800;color:#7c3aed;animation:blink 10s infinite}@keyframes blink{0%,95%,100%{opacity:1}97%{opacity:0}}nav a{margin:0 8px;text-decoration:none;color:#444;font-size:14px}.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(120deg,#7c3aed,#a78bfa,#c4b5fd)}h1{font-size:34px;color:#fff}#changing{color:#fff}.hero p{color:#eee;margin-top:10px}.cta{margin-top:16px;padding:12px 20px;border:none;border-radius:14px;background:#fff;color:#7c3aed;font-weight:600}.section{padding:60px 20px;max-width:1000px;margin:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.card{background:#fff;padding:14px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.08);transition:.3s}.card img{width:100%;height:130px;object-fit:cover;border-radius:12px;margin-bottom:10px}.card:active{transform:scale(.96)}.section:nth-child(even){background:#faf5ff}.stats{display:flex;justify-content:space-around;margin-top:20px}.count{color:#7c3aed;font-size:26px}.test{display:flex;gap:10px;overflow-x:auto}.read{max-height:110px;overflow:hidden;position:relative;transition:.5s}.fade{position:absolute;bottom:0;width:100%;height:50px;background:linear-gradient(to bottom,transparent,#fff)}.read.exp{max-height:1000px}.btn{margin-top:10px;background:#7c3aed;color:#fff;border:none;padding:8px 14px;border-radius:20px;animation:float 2s infinite}@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}footer{padding:30px;text-align:center;color:#666}</style></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NearKart</title>
+</head>
 
-<header><div class="logo">NearKart</div><nav><a href="#">Home</a><a href="#">Features</a><a href="#">About</a></nav></header>
+<body>
 
-<section class="hero"><h1>Find <span id="changing">Anything</span> Nearby ⚡</h1><p>No more shop hunting</p><button class="cta">Get Started</button></section>
+<header>
+<h2>NearKart</h2>
+<nav>
+<a href="#">Home</a> | 
+<a href="#">Features</a> | 
+<a href="#">About</a> | 
+<a href="#">Contact</a>
+</nav>
+</header>
 
-<section class="section"><h2>Live Nearby Results</h2><div class="grid"><div class="card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"><h3>Milk</h3><p>₹28 • 0.5km ⭐4.5</p></div><div class="card"><img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db"><h3>Rice</h3><p>₹60 • 1km ⭐4.2</p></div><div class="card"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505"><h3>Medicine</h3><p>₹20 • 0.3km ⭐4.8</p></div><div class="card"><img src="https://images.unsplash.com/photo-1510557880182-3c3c1c6b8f5d"><h3>Charger</h3><p>₹399 • 0.8km ⭐4.6</p></div></div></section>
+<main>
 
-<section class="section"><h2>Features</h2><div class="grid"><div class="card">⚡ Real-time search</div><div class="card">📍 Nearby shops</div><div class="card">💰 Best price</div><div class="card">⭐ Trusted vendors</div></div></section>
+<section>
+<h1>Find Anything Nearby ⚡</h1>
+<p>NearKart is built to remove the friction between you and the things you need in your daily life. Instead of walking from one shop to another, guessing availability, and wasting time, you can now search once and instantly discover what is available around you. This is not just convenience, it is a shift in how local discovery works.</p>
+<p>The modern world has evolved digitally, but local shopping still remains inefficient. NearKart bridges this gap by transforming nearby shops into a searchable system where every product becomes visible, comparable, and accessible within seconds.</p>
+</section>
 
-<section class="section"><h2>Growing Fast</h2><div class="stats"><div><div class="count" data="10000">0</div>Users</div><div><div class="count" data="500">0</div>Shops</div><div><div class="count" data="50">0</div>Cities</div></div></section>
+<section>
+<h2>The Problem</h2>
+<p>People spend hours searching for simple items. This problem exists everywhere, from small towns to large cities. A person looking for milk, a charger, or medicine often has to physically visit multiple stores without any guarantee of availability. This leads to frustration, wasted time, and poor decisions.</p>
+<p>The lack of visibility is the core issue. Products exist nearby, but users cannot see them. Shops have inventory, but they are invisible to customers unless physically visited. This disconnect creates inefficiency on both sides.</p>
+</section>
 
-<section class="section"><h2>Testimonials</h2><div class="test" id="test"><div class="card">Saved hours! ⭐⭐⭐⭐⭐</div><div class="card">Super fast! ⚡</div><div class="card">Very useful 🔥</div></div></section>
+<section>
+<h2>The Solution</h2>
+<p>NearKart connects users and shops through a real-time discovery system. By searching for any product, users can instantly see nearby availability, pricing, and shop details. This removes uncertainty and enables smarter decisions.</p>
+<p>The platform is designed to be simple, fast, and accessible. No complex steps, no delays. Just search, compare, and act. The goal is to make local discovery as seamless as searching online.</p>
+</section>
 
-<section class="section"><h2>Deep Dive</h2><div class="read" id="read">NearKart solves local discovery inefficiency. It removes uncertainty and saves time. Users explore digitally before stepping out. This improves decisions and reduces effort. Future includes AI and predictive systems. This will redefine local commerce.</div><div class="fade"></div><button id="btn" class="btn">Read More</button></section>
+<section>
+<h2>Deep Concept Explanation</h2>
+<p>NearKart is not just a tool; it is a layer over the physical world. Imagine being able to search your surroundings the same way you search the internet. Every shop becomes a node in a network, every product becomes searchable data, and every decision becomes informed and efficient.</p>
+<p>This concept changes how people interact with their environment. Instead of moving blindly, users move with knowledge. Instead of guessing, they decide. Instead of wasting time, they optimize it.</p>
+<p>The long-term vision is to create a fully connected local ecosystem where inventory updates in real time, recommendations are personalized, and the entire shopping experience becomes predictive rather than reactive.</p>
+</section>
 
-<footer>© NearKart • Built by Satya 🚀</footer>
+<section>
+<h2>Use Case Scenarios</h2>
+<p>A student needs a notebook urgently before an exam. Instead of checking multiple shops, they search once and find the nearest available option.</p>
+<p>A person needs medicine late at night. Instead of uncertainty, they instantly know which pharmacy has it in stock.</p>
+<p>A family doing grocery shopping can compare prices across nearby stores without physically visiting each one.</p>
+<p>A small business gains visibility and reaches customers who otherwise would never find them.</p>
+</section>
 
-<script>const w=["Milk","Snacks","Medicines","Chargers"];let i=0;setInterval(()=>{let e=document.getElementById("changing");e.style.opacity=0;setTimeout(()=>{i=(i+1)%w.length;e.innerText=w[i];e.style.opacity=1},300)},2000);document.getElementById("btn").onclick=()=>{let r=document.getElementById("read");r.classList.toggle("exp");btn.innerText=r.classList.contains("exp")?"Show Less":"Read More"};document.querySelectorAll(".count").forEach(e=>{let t=+e.getAttribute("data"),c=0;let i=setInterval(()=>{c+=t/50;if(c>=t){e.innerText=t;clearInterval(i)}else e.innerText=Math.floor(c)},40)});setInterval(()=>{test.scrollLeft+=200;if(test.scrollLeft>=test.scrollWidth-test.clientWidth)test.scrollLeft=0},2000);</script>
+<section>
+<h2>Features</h2>
+<ul>
+<li>Real-time product search</li>
+<li>Nearby shop discovery</li>
+<li>Price comparison</li>
+<li>Availability tracking</li>
+<li>Simple and fast interface</li>
+</ul>
+</section>
 
-</body></html>
+<section>
+<h2>Why It Matters</h2>
+<p>Time is one of the most valuable resources. Every minute spent searching unnecessarily is a loss. NearKart reduces this waste by making information accessible instantly.</p>
+<p>For shops, visibility is growth. For users, clarity is power. NearKart provides both.</p>
+</section>
+
+<section>
+<h2>Trust and Growth</h2>
+<p>NearKart is built with trust in mind. Shops can be verified, rated, and reviewed. Users can rely on the accuracy of information and make confident decisions.</p>
+<p>The platform is designed to scale across cities, regions, and eventually the entire country. The vision is large, but the execution begins with solving real problems at a local level.</p>
+</section>
+
+<section>
+<h2>Long Form Insight</h2>
+<p>Local commerce is one of the largest yet most inefficient systems in the world. Despite the rise of e-commerce, the majority of transactions still happen offline. This creates a massive opportunity for optimization.</p>
+<p>NearKart does not aim to replace local shops; it aims to empower them. By giving them digital visibility, it allows them to compete, grow, and serve customers better.</p>
+<p>This approach ensures sustainability, scalability, and real-world impact.</p>
+<p>As technology evolves, the integration of AI, logistics, and predictive systems will further enhance the platform, making it smarter and more efficient over time.</p>
+</section>
+
+<section>
+<h2>Extended Reading Section</h2>
+<p>NearKart introduces a paradigm where information flows faster than movement. This fundamentally changes decision-making behavior. Users no longer rely on physical exploration; they rely on data-driven insights.</p>
+<p>This shift has implications beyond convenience. It affects productivity, urban movement, and even economic efficiency.</p>
+<p>By reducing unnecessary travel, it contributes to better time management and potentially even environmental benefits.</p>
+<p>The system is designed to evolve continuously, adapting to user behavior and improving accuracy over time.</p>
+<p>Every interaction contributes to a smarter network, making the system more powerful with each use.</p>
+</section>
+
+<section>
+<h2>Future Vision</h2>
+<p>The future of NearKart includes real-time inventory sync, delivery integration, AI recommendations, and predictive analytics. The goal is to create a system that understands user needs even before they search.</p>
+<p>This is not just about technology; it is about redefining convenience.</p>
+</section>
+
+<section>
+<h2>Founder</h2>
+<p>Built by Satya, a student with a vision to simplify local discovery and create a system that empowers both users and businesses.</p>
+</section>
+
+<section>
+<h2>FAQs</h2>
+<p><strong>Is NearKart free?</strong> Yes, it is free for users.</p>
+<p><strong>How does it work?</strong> It connects users with nearby shops and displays real-time availability.</p>
+<p><strong>Is it accurate?</strong> The system is designed to improve accuracy through continuous updates.</p>
+</section>
+
+<section>
+<h2>Final Thoughts</h2>
+<p>NearKart represents a shift in thinking. It challenges the way we interact with our surroundings and offers a smarter alternative.</p>
+<p>The journey from idea to execution is just the beginning. The real impact comes from solving real problems at scale.</p>
+</section>
+
+<section>
+<h2>Get Started</h2>
+<p>Start using NearKart and experience a smarter way to discover products around you.</p>
+<button>Explore Now</button>
+</section>
+
+</main>
+
+<footer>
+<p>© NearKart | Built by Satya 🚀</p>
+</footer>
+
+</body>
+</html>
